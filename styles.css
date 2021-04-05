@@ -73,7 +73,7 @@ nav {
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
   color: rgb(230, 230, 230);
 }
 
@@ -92,6 +92,22 @@ main {
   .hamburger {
     display: block;
   }
+  .hamburger.toggle .line-1 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .hamburger.toggle .line-2 {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  .hamburger.toggle .line-3 {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
   .nav-links {
     position: absolute;
     height: calc(100vh - 4.875rem);
@@ -106,27 +122,11 @@ main {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 05px 0 0 0;
   }
+
   .nav-links li:not(:last-child) {
     margin-right: 0;
   }
-}
-
-.nav-links.active {
-  transform: translateX(0);
-}
-
-.hamburger.toggle .line-1 {
-  transform: rotate(45deg);
-  position: relative;
-  top: 8px;
-}
-
-.hamburger.toggle .line-2 {
-  opacity: 0;
-}
-
-.hamburger.toggle .line-3 {
-  transform: rotate(-45deg);
-  position: relative;
-  top: -8px;
+  .nav-links.active {
+    transform: translateX(0);
+  }
 }
